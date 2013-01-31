@@ -18,11 +18,17 @@ module VirusTotal
     VTAPI_NOT_FOUND = 0
     VTAPI_REQ_EXCEEDED = -2
     VTAPI_KEY_ERROR = -1 
-    
-    GET_FILE_REPORT = 'https://www.virustotal.com/api/get_file_report.json'
-    SCAN_FILE = 'https://www.virustotal.com/api/scan_file.json'
-    GET_URL_REPORT = 'https://www.virustotal.com/api/get_url_report.json'
-    SCAN_URL = 'https://www.virustotal.com/api/scan_url.json'
+
+     ## Its small modification on VirusTotal::API to use APIv2 instead of APIv1 ##
+#    GET_FILE_REPORT = 'https://www.virustotal.com/api/get_file_report.json'
+#    SCAN_FILE = 'https://www.virustotal.com/api/scan_file.json'
+#    GET_URL_REPORT = 'https://www.virustotal.com/api/get_url_report.json'
+#    SCAN_URL = 'https://www.virustotal.com/api/scan_url.json'
+
+    GET_FILE_REPORT = 'https://www.virustotal.com/vtapi/v2/file/report.json'
+    SCAN_FILE       = 'https://www.virustotal.com/vtapi/v2/file/scan.json'
+    GET_URL_REPORT  = 'http://www.virustotal.com/vtapi/v2/url/report'
+    SCAN_URL        = 'https://www.virustotal.com/vtapi/v2/url/scan'
   
     attr_reader :vtapistatus
     
